@@ -1,16 +1,20 @@
-const CACHE_NAME = 'jeake-campaign-v1';
+const CACHE_NAME = 'hofman-chen-v2';
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/script.js',
-  '/manifest.json'
+  './',
+  'index.html',
+  'app.html',
+  'styles.css',
+  'app.css',
+  'app.js',
+  'script.js',
+  'manifest.json'
 ];
 
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))
   );
+  self.skipWaiting();
 });
 
 self.addEventListener('fetch', event => {
@@ -25,4 +29,5 @@ self.addEventListener('activate', event => {
       Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
     )
   );
+  self.clients.claim();
 });

@@ -1,8 +1,8 @@
 {
-  "name": "Jeake the Magician — Stanford Student Union 2026",
-  "short_name": "Vote Jeake",
-  "description": "Campaign website for Jeake the Magician running for Stanford Student Union",
-  "start_url": "/",
+  "name": "Hofman & Chen — Stanford Student Union 2026",
+  "short_name": "Laundry Closet",
+  "description": "Campaign site & free Laundry Closet styling app from Jake Hofman & Amelia Chen",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#8C1515",

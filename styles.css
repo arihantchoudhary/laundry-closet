@@ -277,14 +277,19 @@ img {
 /* ─── About ─── */
 .about-grid {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: 48px;
   align-items: start;
 }
 
+.about-photos {
+  display: flex;
+  gap: 16px;
+}
+
 .placeholder-img {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 3 / 4;
   background: var(--gray-100);
   border-radius: var(--radius);
   display: flex;
@@ -335,6 +340,36 @@ img {
 .platform-card p {
   color: var(--gray-600);
   font-size: 0.95rem;
+}
+
+.platform-card-featured {
+  grid-column: 1 / -1;
+  background: var(--cardinal);
+  color: var(--white);
+  border-color: var(--cardinal);
+}
+
+.platform-card-featured h3 {
+  font-size: 1.4rem;
+}
+
+.platform-card-featured p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+}
+
+.platform-card-featured .btn-primary {
+  background: var(--white);
+  color: var(--cardinal);
+}
+
+.platform-card-featured .btn-primary:hover {
+  background: var(--gray-100);
+}
+
+.platform-card-featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(140, 21, 21, 0.3);
 }
 
 /* ─── Events ─── */
@@ -514,8 +549,9 @@ img {
     text-align: center;
   }
 
-  .about-photo {
-    max-width: 220px;
+  .about-photos {
+    justify-content: center;
+    max-width: 280px;
     margin: 0 auto;
   }
 
