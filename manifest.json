@@ -1,0 +1,17 @@
+{
+  "name": "Jeake the Magician — Stanford Student Union 2026",
+  "short_name": "Vote Jeake",
+  "description": "Campaign website for Jeake the Magician running for Stanford Student Union",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#8C1515",
+  "icons": [
+    {
+      "src": "icons/icon-192.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
