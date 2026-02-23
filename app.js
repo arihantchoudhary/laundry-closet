@@ -508,7 +508,10 @@ const App = {
       card.innerHTML = `
         <div class="outfit-card-header">
           <span class="outfit-label">Outfit ${idx + 1}</span>
-          <span class="outfit-score">${outfit.score}/100</span>
+          <span class="outfit-score">
+            <span class="score-bar"><span class="score-fill" style="width:${outfit.score}%"></span></span>
+            ${outfit.score}
+          </span>
         </div>
         <div class="outfit-items">${pieces}</div>
         <div class="outfit-colors">${colorDots}</div>

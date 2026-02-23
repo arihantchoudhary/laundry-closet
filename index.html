@@ -12,14 +12,17 @@
   <meta name="apple-mobile-web-app-title" content="Vote Jake & Amelia">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">Hofman & Chen ✦</a>
+      <a href="#" class="nav-logo">
+        <span class="logo-mark">H&C</span>
+        <span class="logo-year">2026</span>
+      </a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -35,23 +38,66 @@
 
   <!-- Hero -->
   <header class="hero" id="hero">
-    <div class="hero-content">
-      <p class="hero-tag">Stanford Student Union 2026</p>
-      <h1 class="hero-title">
-        Look Good.<br>
-        <span class="highlight">Do Good.</span><br>
-        Lead.
-      </h1>
-      <p class="hero-sub">Vote <strong>Jake Hofman & Amelia Chen</strong> — style meets substance in student government.</p>
-      <div class="hero-cta">
-        <a href="app.html" class="btn btn-primary">Try Laundry Closet Free</a>
-        <a href="#platform" class="btn btn-outline">See the Platform</a>
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-content" data-animate>
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Stanford Student Union 2026
+        </div>
+        <h1 class="hero-title">
+          Look Good.<br>
+          <span class="highlight">Do Good.</span><br>
+          Lead.
+        </h1>
+        <p class="hero-sub">Vote <strong>Jake Hofman & Amelia Chen</strong> — style meets substance in student government.</p>
+        <div class="hero-cta">
+          <a href="app.html" class="btn btn-primary btn-lg">
+            <span>Try Laundry Closet Free</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#platform" class="btn btn-ghost">See the Platform</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">Free</span>
+            <span class="stat-label">For all students</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">AI-Powered</span>
+            <span class="stat-label">Outfit matching</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">Daily</span>
+            <span class="stat-label">Style suggestions</span>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-card">
-        <span class="card-icon">👔</span>
-        <p>Jake & Amelia photo goes here</p>
+      <div class="hero-visual" data-animate data-delay="200">
+        <div class="hero-phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-header">Laundry Closet</div>
+            <div class="phone-cards">
+              <div class="phone-card pc-1"></div>
+              <div class="phone-card pc-2"></div>
+              <div class="phone-card pc-3"></div>
+            </div>
+            <div class="phone-tab-bar">
+              <span class="ptab active">Capture</span>
+              <span class="ptab">Closet</span>
+              <span class="ptab">Today</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-float float-1">
+          <span>👔</span> Daily outfits
+        </div>
+        <div class="hero-float float-2">
+          <span>✨</span> Color matched
+        </div>
       </div>
     </div>
   </header>
@@ -59,14 +105,32 @@
   <!-- About -->
   <section class="section" id="about">
     <div class="container">
-      <p class="section-tag">Meet the Ticket</p>
-      <h2 class="section-title">Students. Leaders. Builders.</h2>
+      <div class="section-header" data-animate>
+        <p class="section-tag">Meet the Ticket</p>
+        <h2 class="section-title">Students. Leaders.<br><span class="text-accent">Builders.</span></h2>
+      </div>
       <div class="about-grid">
-        <div class="about-photos">
-          <div class="placeholder-img">Jake's Photo</div>
-          <div class="placeholder-img">Amelia's Photo</div>
+        <div class="about-photos" data-animate>
+          <div class="about-card">
+            <div class="placeholder-img">
+              <span class="placeholder-label">Jake Hofman</span>
+            </div>
+            <div class="about-card-info">
+              <h3>Jake Hofman</h3>
+              <p class="about-role">President</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="placeholder-img">
+              <span class="placeholder-label">Amelia Chen</span>
+            </div>
+            <div class="about-card-info">
+              <h3>Amelia Chen</h3>
+              <p class="about-role">Vice President</p>
+            </div>
+          </div>
         </div>
-        <div class="about-text">
+        <div class="about-text" data-animate data-delay="150">
           <p>
             <strong>Jake Hofman</strong> is a Stanford student and builder who believes student government
             should create things students actually use. His first move? Giving every Cardinal free access
@@ -78,43 +142,74 @@
             organizations and a focus on transparency and access, she makes sure the big ideas actually
             ship. Together, they're running on a platform of practical innovation for student life.
           </p>
+          <a href="#platform" class="text-link">See what we're building →</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Platform -->
-  <section class="section section-alt" id="platform">
+  <section class="section section-dark" id="platform">
     <div class="container">
-      <p class="section-tag">The Platform</p>
-      <h2 class="section-title">What We'll Build for You</h2>
-      <div class="platform-grid">
-        <div class="platform-card platform-card-featured">
-          <span class="platform-icon">👔</span>
-          <h3>Free Laundry Closet App for Every Student</h3>
+      <div class="section-header" data-animate>
+        <p class="section-tag">The Platform</p>
+        <h2 class="section-title">What We'll Build<br><span class="text-accent">for You</span></h2>
+      </div>
+
+      <!-- Featured Card -->
+      <div class="platform-featured" data-animate>
+        <div class="featured-content">
+          <div class="featured-badge">Flagship Initiative</div>
+          <h3>Free Laundry Closet App<br>for Every Student</h3>
           <p>
             Snap photos of your clothes, and our smart matching algorithm builds daily outfits for you.
             No more staring at your closet for 20 minutes. Look your best, stress-free — on us.
           </p>
-          <a href="app.html" class="btn btn-primary" style="margin-top: 16px;">Try It Now</a>
+          <a href="app.html" class="btn btn-primary btn-lg">
+            <span>Try It Now</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
+        <div class="featured-visual">
+          <div class="featured-mockup">
+            <div class="mockup-item mi-1"></div>
+            <div class="mockup-item mi-2"></div>
+            <div class="mockup-item mi-3"></div>
+            <div class="mockup-arrow">→</div>
+            <div class="mockup-outfit">
+              <span>Today's Outfit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regular Cards -->
+      <div class="platform-grid" data-animate data-delay="200">
         <div class="platform-card">
-          <span class="platform-icon">🎪</span>
+          <div class="platform-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
           <h3>More Campus Events</h3>
           <p>Expand programming to include more diverse, student-driven events every quarter.</p>
         </div>
         <div class="platform-card">
-          <span class="platform-icon">💰</span>
+          <div class="platform-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
           <h3>Funding Transparency</h3>
           <p>Open dashboards so every student can see where Student Union dollars go.</p>
         </div>
         <div class="platform-card">
-          <span class="platform-icon">🤝</span>
+          <div class="platform-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
           <h3>Org Support</h3>
           <p>Streamline the funding and approval process for student organizations.</p>
         </div>
         <div class="platform-card">
-          <span class="platform-icon">🗣️</span>
+          <div class="platform-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
           <h3>Open Office Hours</h3>
           <p>Weekly drop-in sessions — no appointment needed — to hear what students actually want.</p>
         </div>
@@ -125,20 +220,23 @@
   <!-- Events -->
   <section class="section" id="events">
     <div class="container">
-      <p class="section-tag">Campaign Trail</p>
-      <h2 class="section-title">Upcoming Events</h2>
-      <div class="events-list">
-        <div class="event-item">
+      <div class="section-header" data-animate>
+        <p class="section-tag">Campaign Trail</p>
+        <h2 class="section-title">Upcoming <span class="text-accent">Events</span></h2>
+      </div>
+      <div class="events-list" data-animate data-delay="100">
+        <a href="#" class="event-item">
           <div class="event-date">
             <span class="event-month">MAR</span>
             <span class="event-day">TBD</span>
           </div>
           <div class="event-info">
             <h3>Campaign Kickoff</h3>
-            <p>White Plaza — Live demo of Laundry Closet, music, and free food. Come meet Jake & Amelia.</p>
+            <p>White Plaza — Live demo of Laundry Closet, music, and free food.</p>
           </div>
-        </div>
-        <div class="event-item">
+          <svg class="event-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#" class="event-item">
           <div class="event-date">
             <span class="event-month">MAR</span>
             <span class="event-day">TBD</span>
@@ -147,8 +245,9 @@
             <h3>Town Hall Q&A</h3>
             <p>Tresidder Memorial Union — Ask us anything about the platform.</p>
           </div>
-        </div>
-        <div class="event-item">
+          <svg class="event-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#" class="event-item">
           <div class="event-date">
             <span class="event-month">APR</span>
             <span class="event-day">TBD</span>
@@ -157,28 +256,40 @@
             <h3>Election Day</h3>
             <p>Vote online or at polling stations across campus.</p>
           </div>
-        </div>
+          <svg class="event-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Get Involved -->
-  <section class="section section-alt" id="involved">
+  <section class="section section-dark" id="involved">
     <div class="container">
-      <p class="section-tag">Join the Movement</p>
-      <h2 class="section-title">Get Involved</h2>
-      <div class="involved-grid">
+      <div class="section-header" data-animate>
+        <p class="section-tag">Join the Movement</p>
+        <h2 class="section-title">Get <span class="text-accent">Involved</span></h2>
+      </div>
+      <div class="involved-grid" data-animate data-delay="100">
         <div class="involved-card">
+          <div class="involved-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
           <h3>Volunteer</h3>
           <p>Help spread the word, hand out flyers, or help run events.</p>
           <a href="#" class="btn btn-primary">Sign Up</a>
         </div>
         <div class="involved-card">
+          <div class="involved-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
           <h3>Endorse</h3>
           <p>Are you a student org or campus leader? Add your name to the list.</p>
           <a href="#" class="btn btn-primary">Endorse the Ticket</a>
         </div>
         <div class="involved-card">
+          <div class="involved-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
           <h3>Follow Along</h3>
           <p>Stay updated on events, announcements, and election news.</p>
           <div class="social-links">
@@ -190,10 +301,35 @@
     </div>
   </section>
 
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-inner" data-animate>
+        <h2>Ready to look your best?</h2>
+        <p>Try Laundry Closet free — no sign-up required.</p>
+        <a href="app.html" class="btn btn-white btn-lg">
+          <span>Open the App</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p class="footer-logo">Hofman & Chen ✦ Stanford Student Union 2026</p>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-mark">H&C</span>
+          <span class="footer-tagline">Hofman & Chen — Stanford Student Union 2026</span>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#platform">Platform</a>
+          <a href="#events">Events</a>
+          <a href="app.html">Laundry Closet</a>
+        </div>
+      </div>
       <p class="footer-fine">Paid for by the Committee to Elect Hofman & Chen. Not affiliated with Stanford University.</p>
     </div>
   </footer>
